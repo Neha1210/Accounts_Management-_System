@@ -1,0 +1,14 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block body %}
+
+<div style="margin-left: 5px;">
+    <form action="" method="POST">
+    {% csrf_token %}
+       {{form}}
+    <input class="btn btn-primary" type="submit" name="Submit">
+
+</form>
+</div>
+
+{% endblock body %}

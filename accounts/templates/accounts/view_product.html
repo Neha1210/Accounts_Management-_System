@@ -1,0 +1,49 @@
+{% extends 'accounts/main.html' %}
+
+{% block body %}
+ <br>
+  <div class="row">
+    <div class="col-md-4">
+
+        <h5 style="margin-left:10px;">Image</h5>
+        <hr>
+        <div class="card card-body">
+          <img src=>
+        </div>
+    
+    </div>
+    <div class="col-md-4">
+        <h5>About Product</h5>
+        <hr>
+
+        <div class="card card-body">
+         {% for i in products %}
+            <h2 style="color:#3CB371">${{i.Price}}</h2>
+            <h7 style="font-weight:bold;">Name:</h7>
+            <p>{{i.name}}</p>
+            <h7 style="font-weight:bold;">catageory</h7>
+            <p> {{i.Category}}</p>
+            <h7 style="font-weight:bold;">Discription:</h7>
+            <p >{{i.Discription}}</p>
+            <h7 style="font-weight:bold;">tag</h7>
+            <p>{{i.Tag.name}}</p>
+         {% endfor %}
+        </div>
+
+    </div>
+      <div class="col-md-4">
+        <h5>Search products</h5>
+        <hr>
+        <div class="card card-body">
+          <div class="row">
+            <div class="col-md-5">
+          <input style="max-width: 390px;" type="text" placeholder="Search for product">            
+          </div>
+          <div class="col-md-5">
+             <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+{% endblock body %}
